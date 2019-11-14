@@ -8,4 +8,4 @@ reduction :: SKITerm -> SKITerm
 reduction (((S :$ x) :$ y) :$ z) = (x :$ z) :$ (y :$ z)
 reduction ((K :$ x) :$ y) = x
 reduction (I :$ x) = x
-reduction (function :$ argument) = (reduction function) $ (reduction argument)
+reduction (function :$ argument) = (reduction function) :$ (reduction argument)
