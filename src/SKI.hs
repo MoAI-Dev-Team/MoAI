@@ -1,5 +1,5 @@
 module SKI
     ( SKITerm(..)
-    ( where
+    ) where
     
 data SKITerm = SKITerm :$ SKITerm | S | K | I deriving (Show, Eq)
