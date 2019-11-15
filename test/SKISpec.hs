@@ -1,4 +1,4 @@
-module SKISpec () where
+module SKISpec (spec) where
 
 import Test.Hspec
 import SKI
