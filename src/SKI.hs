@@ -1,6 +1,6 @@
 module SKI
     ( SKITerm(..)
-     reduction
+    , reduction
     ) where
     
     
