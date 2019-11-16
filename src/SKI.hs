@@ -5,7 +5,7 @@ module SKI
     
 data SKITerm = SKIApply SKITerm SKITerm | S | K | I deriving (Show, Eq)
 
-($:) = SKIApply
+f $: a = SKIApply f a
 
 reduction :: SKITerm -> SKITerm
 reduction (((S $: x) $: y) $: z) = ((x $: z) $: (y $: z))
