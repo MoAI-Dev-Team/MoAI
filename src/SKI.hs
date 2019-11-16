@@ -3,7 +3,6 @@ module SKI
     , reduction
     ) where
     
-    
 data SKITerm = SKITerm :$ SKITerm | S | K | I deriving (Show, Eq)
 
 reduction :: SKITerm -> SKITerm
