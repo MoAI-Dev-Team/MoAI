@@ -3,12 +3,10 @@ module SKI
     , reduction
     ) where
     
-data SKITerm = SKIApply SKITerm SKITerm | S | K | I deriving (Show, Eq)
-
-f $: a = SKIApply f a
+data SKITerm = Apply SKITerm SKITerm | S | K | I deriving (Show, Eq)
 
 reduction :: SKITerm -> SKITerm
-reduction (((S $: x) $: y) $: z) = ((x $: z) $: (y $: z))
-reduction ((K $: x) $: y) = x
-reduction (I $: x) = x
-reduction (function $: argument) = (reduction function) $: (reduction argument)
+reduction (((S `Apply` x) `Apply` y) `Apply` z) = ((x `Apply` z) `Apply` (y `Apply` z))
+reduction ((K `Apply` x) `Apply` _) = x
+reduction (I `Apply` x) = x
+reduction (function `Apply` argument) = (reduction function) `Apply` (reduction argument)
