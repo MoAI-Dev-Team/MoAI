@@ -14,4 +14,3 @@ spec = describe "SKI.reduction" $ do
   context "reduct K S I" $ do
     it "should return S" $ do
       reduction ((K $: S) $: I) `shouldBe` S
-  context "reduct 
