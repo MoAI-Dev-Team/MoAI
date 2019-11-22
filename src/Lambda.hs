@@ -4,6 +4,7 @@ module Lambda
     ) where
 
 import Data.Typeable
+import Data.Data
 
 data LambdaTerm
     = Apply LambdaTerm LambdaTerm
