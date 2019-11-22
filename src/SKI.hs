@@ -3,6 +3,8 @@ module SKI
     , reduction
     ) where
     
+import Data.Typeable
+
 data SKITerm = Apply SKITerm SKITerm | S | K | I deriving (Typeable, Data, Show, Eq)
 
 reduction :: SKITerm -> SKITerm
