@@ -3,7 +3,11 @@ module Lambda
     , reduction
     ) where
 
-data LambdaTerm = Apply LambdaTerm LambdaTerm | Abstract String LambdaTerm | Variable String deriving (Show, Eq)
+data LambdaTerm
+    = Apply LambdaTerm LambdaTerm
+    | Abstract String LambdaTerm
+    | Variable String
+    deriving (Typeable, Data, Show, Eq)
 
 replace :: String -> LambdaTerm -> LambdaTerm -> LambdaTerm
 replace s x (y `Apply` z) = replace s x y `Apply` replace s x z
