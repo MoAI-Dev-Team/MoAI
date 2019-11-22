@@ -3,6 +3,8 @@ module Lambda
     , reduction
     ) where
 
+import Data.Typeable
+
 data LambdaTerm
     = Apply LambdaTerm LambdaTerm
     | Abstract String LambdaTerm
