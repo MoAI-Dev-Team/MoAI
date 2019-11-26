@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveDataTypeable #-}
 module SKI
     ( SKITerm(..)
     , reduction
