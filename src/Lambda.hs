@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveDataTypeable #-}
 module Lambda
     ( LambdaTerm(..)
     , reduction
