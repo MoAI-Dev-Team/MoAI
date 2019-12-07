@@ -22,7 +22,7 @@ reduction :: LambdaTerm -> LambdaTerm
 reduction ((Abstract s x) `Apply` y) = replace s y x
 reduction (f `Apply` x) = 
   if freducted /= f
-  then freducted `Apply x
+  then freducted `Apply` x
   else f `Apply` xreducted
   where
     freducted = reduction f
