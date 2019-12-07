@@ -13,4 +13,10 @@ reduction :: SKITerm -> SKITerm
 reduction (S `Apply` x `Apply` y `Apply` z) = x `Apply` z `Apply` (y `Apply` z)
 reduction (K `Apply` x `Apply` _) = x
 reduction (I `Apply` x) = x
-reduction (function `Apply` argument) = reduction function `Apply` reduction argument
+reduction (f `Apply` x) = 
+  if freducted == f
+  then freducted `Apply` x
+  else f `Apply` xreducted
+  where
+    freducted = reduction f
+    xreducted = reduction x
