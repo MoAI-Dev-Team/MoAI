@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 module Lambda
     ( LambdaTerm(..)
-    , reduction
+    , reduce
     ) where
 
 import Data.Typeable
@@ -18,13 +18,13 @@ replace s x (y `Apply` z) = replace s x y `Apply` replace s x z
 replace s1 x (Abstract s2 y) = Abstract s2 $ replace s1 x y
 replace s1 x y@(Variable s2) = if s1 == s2 then x else y
 
-reduction :: LambdaTerm -> LambdaTerm
-reduction ((Abstract s x) `Apply` y) = replace s y x
-reduction (f `Apply` x) = 
+reduce :: LambdaTerm -> LambdaTerm
+reduce ((Abstract s x) `Apply` y) = replace s y x
+reduce (f `Apply` x) = 
   if freducted /= f
   then freducted `Apply` x
   else f `Apply` xreducted
   where
-    freducted = reduction f
-    xreducted = reduction x
-reduction x = x
+    freducted = reduce f
+    xreducted = reduce x
+reduce x = x
