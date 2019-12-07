@@ -20,4 +20,11 @@ replace s1 x y@(Variable s2) = if s1 == s2 then x else y
 
 reduction :: LambdaTerm -> LambdaTerm
 reduction ((Abstract s x) `Apply` y) = replace s y x
+reduction (f `Apply` x) = 
+  if freducted /= f
+  then freducted `Apply x
+  else f `Apply` xreducted
+  where
+    freducted = reduction f
+    xreducted = reduction x
 reduction x = x
