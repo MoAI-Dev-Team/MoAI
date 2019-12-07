@@ -20,3 +20,4 @@ reduction (f `Apply` x) =
   where
     freducted = reduction f
     xreducted = reduction x
+reduction x = x
