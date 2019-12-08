@@ -29,4 +29,4 @@ instance Reducible LambdaTerm where
         where
             freducted = reduce f
             xreducted = reduce x
-            reduce x = x
+    reduce x = x
