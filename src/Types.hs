@@ -2,8 +2,6 @@ module Types
     (
     ) where
 
-import SKI
-
 class Eq a => Reducible a where
     reduce :: a -> a
     reduceAll :: a -> a
