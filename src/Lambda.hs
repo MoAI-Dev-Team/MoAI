@@ -1,7 +1,6 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 module Lambda
     ( LambdaTerm(..)
-    , reduce
     ) where
 
 import Data.Typeable
