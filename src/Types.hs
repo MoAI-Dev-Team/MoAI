@@ -1,5 +1,5 @@
 module Types
-    (
+    ( Reducible
     ) where
 
 class Eq a => Reducible a where
