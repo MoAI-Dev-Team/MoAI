@@ -1,6 +1,7 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 module SKI
     ( SKITerm(..)
+    , Reducible(..)
     ) where
     
 import Data.Typeable
