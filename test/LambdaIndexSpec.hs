@@ -1,13 +1,13 @@
 module LambdaSpec (spec) where
 
 import Test.Hspec
-import Lambda
+import LambdaIndex
 
 spec :: Spec
 spec = describe "Lambda.reduce" $ do
-    let x = Variable "x"
-        y = Variable "y"
-        xxy = Abstract "x" (Variable "x") `Apply` Variable "y"
+    let x = Variable 0
+        y = Variable 1
+        xxy = Abstract 0 (Variable 0) `Apply` Variable 1
   
     context "reduce (λx.x) y once" $ do
         it "should return y" $ do
