@@ -1,5 +1,5 @@
 {-# LANGUAGE DeriveDataTypeable #-}
-module Lambda
+module LambdaIndex
     ( LambdaTerm(..)
     , Reducible(..)
     ) where
