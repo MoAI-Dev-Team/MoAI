@@ -1,4 +1,3 @@
 # MoAI
 [![Build Status](https://travis-ci.org/MoAI-Dev-Team/MoAI.svg?branch=master)](https://travis-ci.org/MoAI-Dev-Team/MoAI)  
-MoAI is an automated theorem discovery system.  
-The origin of the name "MoAI" is "Math of Artifical Intelligence."  
+MoAI(Math of Artifical Intelligence) is an automated theorem discovery system.  
