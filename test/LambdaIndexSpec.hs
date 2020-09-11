@@ -1,4 +1,4 @@
-module LambdaSpec (spec) where
+module LambdaIndexSpec (spec) where
 
 import Test.Hspec
 import LambdaIndex
